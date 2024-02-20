@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="528" height="1640" viewBox="0 0 528 1640">
+  <defs>
+    <filter id="Sidebar_Background" x="0" y="0" width="528" height="1640" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Sidebar_Background)">
+    <rect id="Sidebar_Background-2" data-name="Sidebar Background" width="528" height="1640" transform="translate(10 15)" fill="#333"/>
+  </g>
+</svg>

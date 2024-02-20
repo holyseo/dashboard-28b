@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .chart_keys {
+    @apply font-roboto text-[32px] text-sidebar-grey tracking-[1.54px];
+  }
+  .content_headings {
+    @apply font-montserrat font-bold text-[36px] text-sidebar-grey tracking-[1.54px];
+  }
+  .body_content {
+    @apply font-roboto text-[36px] text-sidebar-grey tracking-[1.54px];
+  }
+  .sidebar_fade {
+    @apply font-montserrat text-[36px] text-sidebar-subheading tracking-[1.73px];
+  }
+  .sidebar_text {
+    @apply font-montserrat text-[36px] text-global-white tracking-[1.73px];
+  }
+  .chart_tooltip {
+    @apply font-roboto font-bold text-[36px] text-sidebar-grey tracking-[1.54px];
+  }
+  .chart_titles {
+    @apply font-roboto font-bold text-lg text-sidebar-grey tracking-[1.54px];
+  }
+}
