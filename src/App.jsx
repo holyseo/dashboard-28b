@@ -3,6 +3,9 @@ import "./App.css";
 import { TbSquareRotatedFilled } from "react-icons/tb";
 
 function App() {
+  {
+    /* Setting variables of each bar chart*/
+  }
   const width1 = 19;
   const width2 = 23;
   const width3 = 17;
@@ -53,6 +56,9 @@ function App() {
   const [showText, setShowText] = useState("opacity-100");
   const [isClicked, setIsClicked] = useState(false);
 
+  {
+    /* Function to hide hover effect of a menu on the left pane for 0.3 seconds when it is clicked */
+  }
   const hideMenu = () => {
     setIsClicked(true);
     setTimeout(() => {
@@ -60,6 +66,9 @@ function App() {
     }, 300);
   };
 
+  {
+    /* Show numerator in the donut chart and make it appear slowly */
+  }
   const showNumerator = () => {
     setShowText("");
     setTimeout(() => {
@@ -67,19 +76,24 @@ function App() {
     }, 0);
   };
 
+  {
+    /* Get random number of numerator between 0 and 28 */
+  }
+
   const setRandom = () => {
     setNumerator(Math.floor(Math.random() * 29));
   };
 
   return (
-    <div className=" mx-auto min-w-[1366px] min-h-[1024px] max-w-[2360px] max-h-[1640px] flex flex-row font-bold tracking-wider border-2 border-gray-200 max-w-dvw">
+    <div className=" mx-auto min-w-fit min-h-fit max-w-[2360px] max-h-[1640px] flex flex-row font-bold tracking-wider border-2 border-gray-200 max-w-dvw">
+      {/* Side menu on the left pane */}
       <div className="flex flex-col justify-start w-3/12 gap-16 py-20 text-xl font-light tracking-wider bg-sidebar-grey shadow-sidebar font-montserrat text-global-white ">
         <div className="flex flex-col gap-6 pl-10">
-          <div className=" text-sidebar-subheading">Welcome,</div>
-          <div>Andy Repp</div>
+          <h2 className=" text-sidebar-subheading">Welcome,</h2>
+          <h2>Andy Repp</h2>
         </div>
         <div className="flex flex-col gap-12 ">
-          <div className="pl-10 text-sidebar-subheading">Metrics</div>
+          <h2 className="pl-10 text-sidebar-subheading">Metrics</h2>
           <div className="flex flex-col">
             <div
               onClick={() =>
@@ -89,7 +103,7 @@ function App() {
               }
               className={` cursor-pointer py-6 tracking-widest ${showMenu}`}
             >
-              <div className="pl-10">Overview</div>
+              <h2 className="pl-10">Overview</h2>
             </div>
             <div className="flex flex-col gap-10 ">
               <div
@@ -102,7 +116,7 @@ function App() {
                   hideMenu();
                 }}
               >
-                <div className="pl-10">Detailing</div>
+                <h2 className="pl-10">Detailing</h2>
               </div>
             </div>
             <div className="flex flex-col gap-10 ">
@@ -116,14 +130,14 @@ function App() {
                   hideMenu();
                 }}
               >
-                <div className="pl-10">Calls</div>
+                <h2 className="pl-10">Calls</h2>
               </div>
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-10 ">
           <div className="text-sidebar-subheading">
-            <div className="pl-10">Information</div>
+            <h2 className="pl-10">Information</h2>
           </div>
           <div className="flex flex-col">
             <div className="flex flex-col gap-10 ">
@@ -137,7 +151,7 @@ function App() {
                   hideMenu();
                 }}
               >
-                <div className="pl-10">About profiles</div>
+                <h2 className="pl-10">About profiles</h2>
               </div>
             </div>
             <div className="flex flex-col gap-10 ">
@@ -151,41 +165,43 @@ function App() {
                   hideMenu();
                 }}
               >
-                <div className="pl-10">Detailing targets</div>
+                <h2 className="pl-10">Detailing targets</h2>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Main area for Overview of dashboard */}
       <div className="flex flex-col justify-start w-4/5 gap-12 py-10 ml-10 mr-14 text-sidebar-grey font-montserrat">
-        <div className="mt-12 text-4xl tracking-wider ">Overview</div>
+        <h1 className="mt-12 text-4xl tracking-wider ">Overview</h1>
         <div className="flex flex-col justify-between gap-10 text-xl ">
           <div className="flex flex-row justify-start gap-10 ">
-            <div className="w-1/2">Next call</div>
-            <div className="w-1/2">Calls this month</div>
+            <h2 className="w-1/2">Next call</h2>
+            <h2 className="w-1/2">Calls this month</h2>
           </div>
           <div className="flex flex-row items-start gap-12 ">
             <div className="flex flex-col w-7/12 gap-6 text-xl ">
               <div className="flex flex-row justify-start">
-                <div className="w-1/3">Date:</div>
+                <h2 className="w-1/3">Date:</h2>
                 <div className="w-2/6 pr-1 font-normal tracking-wider font-roboto">
                   Tomorrow, 3PM <br /> 18 February 2023
                 </div>
               </div>
               <div className="flex flex-row justify-start">
-                <div className="w-1/3">Account:</div>
+                <h2 className="w-1/3">Account:</h2>
                 <div className="w-3/6 font-normal tracking-wider font-roboto">
                   Dr. Clinton Ackerman
                 </div>
               </div>
               <div className="flex flex-row justify-start">
-                <div className="w-1/3">Specialty:</div>
+                <h2 className="w-1/3">Specialty:</h2>
                 <div className="w-3/6 font-normal tracking-wider font-roboto">
                   Respiratory therapist Assistive therapy
                 </div>
               </div>
               <div className="flex flex-row justify-start">
-                <div className="w-1/3">Profiling:</div>
+                <h2 className="w-1/3">Profiling:</h2>
                 <div className="w-3/6 font-normal tracking-wider font-roboto">
                   Confident
                 </div>
@@ -199,6 +215,7 @@ function App() {
                 showNumerator();
               }}
             >
+              {/* Dynamic donut chart to generate random numerator when it is clicked or the page is reloaded */}
               <svg height="250" width="250" viewBox="0 0 20 20">
                 <circle r="8.7" cx="10" cy="10" fill="#DDDDDD" />
                 <circle
@@ -265,7 +282,7 @@ function App() {
             </div>
           </div>
           <div className="flex flex-col gap-8 mt-2 text-xl font-semibold">
-            <div>Detailing topic breakdown</div>
+            <h2>Detailing topic breakdown</h2>
             <div className="flex flex-row justify-between text-lg font-light font-roboto ">
               <div className="flex flex-row items-center gap-2">
                 <TbSquareRotatedFilled className="text-xl text-chart-blue" />
@@ -292,6 +309,7 @@ function App() {
                 <span>Other</span>
               </div>
             </div>
+            {/* Sectioin for Bar charts among various topics with levels of Average, Cautious, Complacement and Confident ,  */}
             <div className="flex flex-col gap-6 chart_titles">
               <div className="relative flex flex-col gap-3">
                 <div>Avg. all</div>
